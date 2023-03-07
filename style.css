@@ -2,6 +2,8 @@
 
 :root{
     --roboto: 'Roboto', sans-serif;
+    --lightpink: #fdf2f8;
+    --lightblue: #f0f9ff;
 }
 *{
     margin: 0;
@@ -28,7 +30,7 @@
     grid-template-rows: 1fr 1fr;
     background-color: #f0f9ff;
     padding: 10px 50px;
-    box-shadow: 5px, 5px, 6px 6px lightblue;
+    box-shadow: 5px, 5px, 6px 6px lightgray;
     font-family: var(--roboto);
     height: 250px;
 }
@@ -169,4 +171,111 @@ li{
     padding: 50px;
     background-color: white;
     font-family: var(--roboto);
+    padding: 25px 25px;
+    display: grid;
+    grid-template-columns: 3fr 1fr;
+    column-gap: 20px;
 }
+
+.projects-container{
+    grid-column: 1/2;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.projects-container-header, .announcements-header, .trending-header{
+    font-weight: bold;
+    font-size: 25px;
+}
+
+.card-container{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: repeat(auto-fit, minmax(250px, 1fr));
+    flex: 1;
+    gap: 20px;
+}
+
+.card{
+    /* background-image: linear-gradient(to bottom, var(--lightblue,), white); */
+    padding: 50px 25px;
+    border-radius: 20px;
+    box-shadow: 2px 2px 15px 2px lightgray;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.card-icons{
+    flex: 1;
+    align-self: flex-end;
+    display: flex;
+    gap: 20px;
+    align-items: flex-end;
+}
+
+.card-icon{
+    height: 20px;
+}
+
+.card-title, .announcement-title{
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.announcements-trending-container{
+    grid-column: 2/3;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.announcements{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.announcements-container, .announcement-content{
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+hr{
+    margin-top: 5px;
+}
+
+.announcements-container, .trends-container{
+    padding: 50px 25px;
+    border-radius: 20px;
+    box-shadow: 2px 2px 15px 2px lightgray;
+    background-image: linear-gradient(to bottom, var(--lightpink,), white);
+    
+}
+
+.trending{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    flex: 1;
+}
+
+.trends-container{
+    display: flex;
+    flex-direction: column;
+}
+
+.trending-content{
+    display: flex;
+    gap: 20px;
+    align-items: center;
+}
+
+.user{
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
