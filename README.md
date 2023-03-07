@@ -1,1 +1,1 @@
-A simple Dashbord project made with HTML and CSS using both Grid and flexbox layouts.
+A simple Admin Dashboard project made with HTML and CSS using both Grid and flexbox layouts. View the page through [this link.](https://mitchel-okonjo.github.io/Admin_dashboard/)
