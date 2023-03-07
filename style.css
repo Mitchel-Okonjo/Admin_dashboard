@@ -1,0 +1,172 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+
+:root{
+    --roboto: 'Roboto', sans-serif;
+}
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.icon{
+    height: 50px;
+}
+
+.container{
+    display: grid;
+    grid-template-columns: 1fr 5fr;
+    grid-template-rows: 1fr 4fr;
+    grid-template-areas:
+        "sidebar header"
+        "sidebar main-content";
+}
+
+.header{
+    grid-area: header;
+    display: grid;
+    grid-template-rows: 1fr 1fr;
+    background-color: #f0f9ff;
+    padding: 10px 50px;
+    box-shadow: 5px, 5px, 6px 6px lightblue;
+    font-family: var(--roboto);
+    height: 250px;
+}
+.header .icon{
+    height: 25px;
+}
+
+input{
+    padding: 10px 25px;
+    border-radius: 30px;
+    border-style: none;
+    background-color: white;
+    height: 35px;
+    width: 750px;
+}
+
+input:focus{
+    border: none;
+    border-color: #67e8f9;
+}
+.header-row1{
+    grid-row: 1/2;
+    display: flex;
+    flex: 1;
+    align-items: center;
+}
+
+.header-row1-left{
+    display: flex;
+    gap: 5px;
+}
+
+.header-row1-right{
+    justify-content: flex-end;
+    display: flex;
+    gap: 30px;
+}
+
+.header-row2{
+    grid-row: 2/3;
+    display: flex;
+    gap: 50px;
+    justify-content: space-between;
+}
+
+.header-row2-left{
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    font-size: 25px;
+}
+
+.header-row2-right{
+    display: flex;
+    align-items: center;
+    gap: 25px;
+}
+
+.header button{
+    padding: 15px 40px;
+    /* background-color: #bae6fd; */
+    /* background-color: #38bdf8; */
+    background-color: #7dd3fc;
+    border-radius: 40px;
+    border: none;
+    color: white;
+    font-size: 15px;
+}
+
+.profile-picture{
+    background-image: url("icons/profile-picture.svg");
+    height: 60px;
+    width: 60px;
+    background-size: 100%;
+    background-position-y: 65%;
+    border-radius: 50%;
+    align-self: center;
+}
+
+.header-row2-left .profile-picture{
+    background-image: url("icons/profile-picture.svg");
+    height: 80px;
+    width: 80px;
+    background-size: 100%;
+    background-position-y: 65%;
+    border-radius: 50%;
+    align-self: center;
+}
+.sidebar{
+    grid-area: sidebar;
+    padding: 40px;
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
+    background-color: #bae6fd;
+}
+
+.section-1{
+    display: flex;
+    justify-content: last baseline;
+    align-items: center;
+    gap: 20px;
+    font-size: 25px;
+    padding-right: 10px;
+    font-family: 'Tilt Prism', sans-serif;
+}
+
+.section-2, .section-3{
+    font-family: 'Roboto', sans-serif;
+}
+
+.sidebar-section ul{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.sidebar-section li{
+    display: flex;
+    gap: 20px;
+    justify-content: last baseline;
+    align-items: center;
+    font-weight: bold;
+    font-size: 18px;
+}
+
+li .icon{
+    height: 20px;
+
+}
+
+li{
+    list-style: none;
+}
+
+.content{
+    grid-area: main-content;
+    padding: 50px;
+    background-color: white;
+    font-family: var(--roboto);
+}
